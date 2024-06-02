@@ -1,0 +1,2 @@
+      // "matches": ["*://*.github.com/*"],
+      // "js": ["content.js"],
