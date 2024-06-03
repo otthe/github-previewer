@@ -1,5 +1,5 @@
 # GitHub HTML & CSS Previewer
-GitHub HTML & CSS Previewer is a Chrome extension that adds a convenient preview button to HTML files in GitHub repositories. This allows you to quickly view the rendered output directly within your browser, making it easier to review static content.
+GitHub HTML & CSS Previewer is a Chrome extension that adds a convenient preview button to HTML files in GitHub repositories. This allows you to quickly view the rendered output directly within your browser.
 <br><br>
 ![Alt text](/screenshots/preview.png?raw=true "Optional Title")
 
