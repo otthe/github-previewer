@@ -113,4 +113,12 @@ function observeDOMChanges() {
   addButtons();
 }
 
-observeDOMChanges();
+function initialize() {
+  chrome.storage.sync.get(['previewEnabled'], (result) => {
+      if (result.previewEnabled !== false) { // default to true if undefined
+          observeDOMChanges();
+      }
+  });
+}
+
+initialize();

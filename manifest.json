@@ -4,7 +4,8 @@
   "version": "0.1",
   "description": "Preview HTML and CSS files from GitHub",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "content_scripts": [
     {
@@ -13,9 +14,6 @@
       "css": ["styles.css"]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

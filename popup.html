@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub HTML Preview Toggle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            max-width: 300px;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(16px);
+        }
+        p {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+  <span>Enable GitHub Preview</span><br>
+    <div class="toggle-container">
+        <label class="toggle-switch">
+            <input type="checkbox" id="toggle-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <p><strong>Refresh the page to see changes</strong></p>
+    <script src="popup.js"></script>
+</body>
+</html>
