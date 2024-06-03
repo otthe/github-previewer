@@ -1,12 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "GitHub Preview",
-  "version": "1.0",
-  "description": "View HTML files directly from GitHub without downloading them.",
+  "name": "GitHub HTML Preview",
+  "version": "0.1",
+  "description": "Preview HTML and CSS files from GitHub",
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "<all_urls>"
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.github.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
   ],
   "background": {
     "service_worker": "background.js"
@@ -17,19 +22,7 @@
       "16": "icons/icon16.png"
     }
   },
-  "content_scripts": [
-    {
-      "run_at": "document_end",
-      "matches": ["*://*.github.com/*"],
-      "js": ["content.js"],
-      "css": ["styles.css"]
-    }
-
-  ],
   "icons": {
     "16": "icons/icon16.png"
-  },  
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
   }
 }
