@@ -66,7 +66,7 @@ function addButtons() {
   fileElements.forEach(fileElement => {
     if (!fileElement.parentElement.querySelector('.ls-button')) {
       const button = document.createElement('button');
-      button.innerText = 'Preview';
+      button.innerText = '< Preview >';
       button.className = 'ls-button button-3';
       button.style.marginLeft = '10px';
 
@@ -86,9 +86,6 @@ function addButtons() {
           newTab.document.close();
 
           await inlineResources(newTab, fileUrl);
-
-          throw new Error('fail test');
-
         } catch (error) {
           showNotification('Failed to fetch the HTML file');
         }
