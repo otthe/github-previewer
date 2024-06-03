@@ -27,4 +27,4 @@ GitHub HTML & CSS Previewer is a Chrome extension that adds a convenient preview
 * This extension might not work as expected if there is scripts linked to the HTML.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](other_file.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
